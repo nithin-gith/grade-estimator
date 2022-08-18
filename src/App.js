@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import style from './styles/app.module.css'
+import {courses_data} from './courses_data_for_react.js'
+import React, {useState} from 'react';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div >Grade Estimator</div>
+      <div>ENTER COURSE</div>
+      <div className={style.inputbox} >
+          <input className={style.input}  />
+          <div >
+              <ul>
+              {courses_data.map((course)=>{
+                  return (<li key ={course.id}>{course.name} - {course.credits}</li>)
+              })}
+              </ul>
+          </div>
+      </div>
     </div>
   );
 }
