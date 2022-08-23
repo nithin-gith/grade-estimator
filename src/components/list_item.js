@@ -5,7 +5,7 @@ export default function ListItem(props){
         return(
             <div className={style.list_item}>
             <a href='#'  className={style.list_link}>
-                <div onClick={props.functi} className={style.link_div}>{props.code} - {props.name} ({props.credits})</div>
+                <div onClick={props.func} className={style.link_div}>{props.code} - {props.name} ({props.credits})</div>
             </a>
             </div>
         )

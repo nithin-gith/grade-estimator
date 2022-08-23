@@ -1,0 +1,19 @@
+.choosen_list{
+    width:60%;
+    border-radius:5px;
+    border:1px black solid;
+    margin: 15px auto 15px;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+.but{
+    margin-right: 5px;
+}
+.but:hover{
+    cursor: pointer;
+}
+.grade{
+    margin-right: 10px;
+    cursor: pointer;
+}
