@@ -1,4 +1,3 @@
-
 import style from './styles/app.module.css'
 import {courses_data} from './courses_data_for_react.js'
 import React, {useState,useRef} from 'react';
@@ -25,6 +24,8 @@ function App() {
 
   const fuse= new Fuse(courses_data,options)
   const [result,setresult]=useState(fuse.search([]))
+
+
   function handlekeyup(){
     const results=fuse.search(inputBox.current.value)
     setresult(results)
@@ -33,13 +34,17 @@ function App() {
   }
   function handleClickLink(e,props){
     console.log("clicked")
-    props.grade=0
-    marks.tcredits+=parseInt(props.credits)
-    console.log(props)
     if(!added.includes(props)){
+      props.grade=0
       setadded(added=>[...added,props])
+      marks.tcredits+=parseInt(props.credits)
+      console.log(props)
     }
+    inputBox.current.value=""
+    inputBox.current.focus()
+    setstyles({display:"none"})
   }
+
   function removecourse(e,props){
     setadded(added=>added.filter(item=>item!==props))
     marks.tcredits-=parseInt(props.credits)
@@ -47,6 +52,7 @@ function App() {
     setgp(marks.tgradepoints)
     console.log("removed")
   }
+
   function changegrade(e,course){
     console.log(course)
     marks.tgradepoints-=parseInt(course.credits)*course.grade
@@ -67,9 +73,9 @@ function App() {
       <div >Grade Estimator</div>
       <div>ENTER COURSE</div>
       <div className={style.inputbox} >
-          <input placeholder="Add Course Here" onKeyUp={handlekeyup}className={style.input} ref={inputBox}  />
+          <input placeholder="Add Course Here"  onKeyUp={handlekeyup} className={style.input} ref={inputBox}  />
           <div >
-              <ul ref ={resultbox} style = {styles}className={style.result}>
+              <ul ref ={resultbox} style = {styles} className={style.result}>
                   {result.length===0?(<ListItem name = "No Results Found!"/>):result.map((course) => {
                       return <ListItem func = {event=>handleClickLink(event,course.item)} there = '1' key = {course.item.id} code ={course.item.course_code} name={course.item.name} credits={course.item.credits} />
                   })}
