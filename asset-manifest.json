@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/grade-estimator/static/css/main.429e5aa7.css",
+    "main.js": "/grade-estimator/static/js/main.b7e491dd.js",
+    "index.html": "/grade-estimator/index.html",
+    "main.429e5aa7.css.map": "/grade-estimator/static/css/main.429e5aa7.css.map",
+    "main.b7e491dd.js.map": "/grade-estimator/static/js/main.b7e491dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.429e5aa7.css",
+    "static/js/main.b7e491dd.js"
+  ]
+}
