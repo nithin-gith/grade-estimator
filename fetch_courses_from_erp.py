@@ -7,8 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# departments = ['AE','AG','AI','AR','AT','BE','BM','BS','BT','CD','CE','CH','CL','CR','CS','CY','DE','DH','EC','EE','EF','ES','ET','FA','GG','GS','HS','ID','IM','IP','IT','KS','MA','ME','MI','MM','MS','MT','NA','NT','PH','RD','RE','RJ','RT','RX','SE','SH','SL','TS','WM']
-departments=['CH']
+departments = ['AE','AG','AI','AR','AT','BE','BM','BS','BT','CD','CE','CH','CL','CR','CS','CY','DE','DH','EC','EE','EF','ES','ET','FA','GG','GS','HS','ID','IM','IP','IT','KS','MA','ME','MI','MM','MS','MT','NA','NT','PH','RD','RE','RJ','RT','RX','SE','SH','SL','TS','WM']
+# departments=['CH']
 url = "https://erp.iitkgp.ac.in/Acad/timetable_track.jsp?action=second&dept="
 
 headers ={
@@ -96,7 +96,7 @@ def fetch_courses():
 
 
 def make_json():
-    jsonFile = open("CH.json", "w+")
+    jsonFile = open("new_courses.json", "w+")
     jsonFile.write(json.dumps(courses))
     jsonFile.close()
 
