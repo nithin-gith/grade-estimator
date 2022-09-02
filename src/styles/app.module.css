@@ -1,7 +1,19 @@
+.heading{
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    margin: 30px;
+}
 .input{
     width: 97.5%;
+    height: 30px;
     padding: 0.5rem;
     outline: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    border: none;
+    font-size: 15px;
+    padding-left: 15px;
 }
 .inputbox{
     width:50%;
@@ -11,7 +23,7 @@
 .result{
     background-color: white;
     max-height: 300px;
-    width: 50%;
+    width: 49.5%;
     overflow: auto;
     padding: 0;
     border: 2px solid gray;
@@ -20,4 +32,36 @@
 }
 .choosen_list{
     padding-top: 25px;
+}
+.cg{
+    top: 10px;
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.cginput{
+    height: 30px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f5f5f5;
+    border: none;
+    font-size: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    width: 200px;
+}
+
+.cgresult{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.fresult{
+    /* position: relative; */
+    bottom: 10%;
+    left: 0;
+    right: 0;
 }

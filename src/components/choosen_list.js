@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import style from '../styles/choosen_list.module.css'
-import ListItem from './list_item'
+
 
 export default function ChoosenList(props){
     // console.log(props)
@@ -21,7 +21,7 @@ export default function ChoosenList(props){
         <div  className={style.choosen_list}>
             <div>
                 <button className={style.but} onClick={props.func}> - </button>
-                {props.name}
+                {props.name} | {props.credits} 
             </div>
             <div>
                 <button style = {styled[0]} className={style.grade} onClick={(e)=>handleClickLink(e,props,0)} >EX</button>
